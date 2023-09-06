@@ -38,7 +38,7 @@
             // 
             // BTNlogin
             // 
-            BTNlogin.Location = new Point(95, 157);
+            BTNlogin.Location = new Point(237, 208);
             BTNlogin.Name = "BTNlogin";
             BTNlogin.Size = new Size(65, 26);
             BTNlogin.TabIndex = 0;
@@ -49,7 +49,7 @@
             // LBLLOGINusername
             // 
             LBLLOGINusername.AutoSize = true;
-            LBLLOGINusername.Location = new Point(12, 79);
+            LBLLOGINusername.Location = new Point(154, 130);
             LBLLOGINusername.Name = "LBLLOGINusername";
             LBLLOGINusername.Size = new Size(63, 15);
             LBLLOGINusername.TabIndex = 1;
@@ -58,7 +58,7 @@
             // LBLLOGINpassword
             // 
             LBLLOGINpassword.AutoSize = true;
-            LBLLOGINpassword.Location = new Point(12, 121);
+            LBLLOGINpassword.Location = new Point(154, 172);
             LBLLOGINpassword.Name = "LBLLOGINpassword";
             LBLLOGINpassword.Size = new Size(60, 15);
             LBLLOGINpassword.TabIndex = 2;
@@ -66,21 +66,23 @@
             // 
             // TXTBOXusername
             // 
-            TXTBOXusername.Location = new Point(78, 79);
+            TXTBOXusername.Location = new Point(220, 130);
             TXTBOXusername.Name = "TXTBOXusername";
             TXTBOXusername.Size = new Size(100, 23);
             TXTBOXusername.TabIndex = 3;
+            TXTBOXusername.Text = "adam";
             // 
             // TXTBOXpassword
             // 
-            TXTBOXpassword.Location = new Point(78, 118);
+            TXTBOXpassword.Location = new Point(220, 169);
             TXTBOXpassword.Name = "TXTBOXpassword";
             TXTBOXpassword.Size = new Size(100, 23);
             TXTBOXpassword.TabIndex = 4;
+            TXTBOXpassword.Text = "as";
             // 
             // BTNregister
             // 
-            BTNregister.Location = new Point(21, 189);
+            BTNregister.Location = new Point(163, 240);
             BTNregister.Name = "BTNregister";
             BTNregister.Size = new Size(213, 26);
             BTNregister.TabIndex = 5;

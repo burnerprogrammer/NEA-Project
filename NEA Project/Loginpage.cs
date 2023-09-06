@@ -27,15 +27,31 @@ namespace Prototype1
 
         private void BTNlogin_Click(object sender, EventArgs e)
         {
-            Homepage homepage = new Homepage();
-            homepage.Show();
+            string username = TXTBOXusername.Text;
+            string password = TXTBOXpassword.Text;
 
-            if (Database.User_Exists(TXTBOXusername.Text))
+
+            if (Database.User_Exists(username) == true)
             {
-                MessageBox.Show("yo");
+                if (Database.Password_Valid(password, username) == true)
+                {
+                    Homepage homepage = new Homepage(username);
+                    homepage.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Password invalid");
 
-
+                }
             }
+            else
+            {
+                MessageBox.Show("Username doesn't exist");
+            }
+
+
+
+
         }
 
         // roblox
@@ -46,7 +62,7 @@ namespace Prototype1
         }
     }
 
- 
+
 }
 
 

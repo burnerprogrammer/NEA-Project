@@ -7,6 +7,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Prototype1;
@@ -23,38 +24,45 @@ namespace NEA_Project
 
         private void BTNSignup_Click(object sender, EventArgs e)
         {
+            string username = TXTBOXusername.Text;
+            string password = TXTBOXpassword.Text;
+            string confirm_password = TXTBOXconfirmpassword.Text;
+            MessageBox.Show("Account created");
             
-                if (TXTBOXusername.Text == "" && TXTBOXpassword.Text == "" && TXTBOXpassword.Text == "")
-                {
-                    MessageBox.Show("Username and password fields are empty", "Failed Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Loginpage loginpage = new Loginpage();
+            loginpage.Show();
+
+
+            if (Database.User_Exists(username) == true)
+            {
+                MessageBox.Show("Username taken");
+                return;
+            }
+
+            if (password != confirm_password)
+            {
+                MessageBox.Show("passwords don't match");
+                return;
+            }
 
 
 
 
-                }
 
 
-                else if (TXTBOXpassword.Text == TXTBOXconfirmpassword.Text)
-                {
-
-                    Database.Add_New_User(TXTBOXusername.Text, TXTBOXpassword.Text);
-
-                    MessageBox.Show("Account created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    this.Close();               
-                }
 
 
-                else
-                {
-                    MessageBox.Show("Passwords dont match please re-enter", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
 
 
-            
+
+
+
+
+            Database.Add_New_User(username, password);
 
 
         }
+
 
     }
 }

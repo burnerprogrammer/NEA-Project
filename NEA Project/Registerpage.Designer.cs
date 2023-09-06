@@ -71,7 +71,6 @@
             TXTBOXusername.Name = "TXTBOXusername";
             TXTBOXusername.Size = new Size(100, 23);
             TXTBOXusername.TabIndex = 3;
-            TXTBOXusername.Text = "adam";
             // 
             // TXTBOXpassword
             // 
@@ -80,7 +79,6 @@
             TXTBOXpassword.PasswordChar = '*';
             TXTBOXpassword.Size = new Size(100, 23);
             TXTBOXpassword.TabIndex = 4;
-            TXTBOXpassword.Text = "as";
             // 
             // LBLREGISTRATIONconfirmpassword
             // 
@@ -98,7 +96,6 @@
             TXTBOXconfirmpassword.PasswordChar = '*';
             TXTBOXconfirmpassword.Size = new Size(100, 23);
             TXTBOXconfirmpassword.TabIndex = 6;
-            TXTBOXconfirmpassword.Text = "as";
             // 
             // Registerpage
             // 
