@@ -132,5 +132,16 @@ namespace Prototype1
             databaseConnection.Close();
             return list;
         }
+
+        public static void Delete_Booking(int bookingID)
+        {
+            databaseConnection.Open();
+            string command =
+                    $" DELETE FROM Bookings WHERE BookingID = {bookingID}";
+            OleDbCommand cmd = new OleDbCommand(command, databaseConnection);
+            cmd.ExecuteNonQuery();
+            databaseConnection.Close();
+        }
+    
     }
 }

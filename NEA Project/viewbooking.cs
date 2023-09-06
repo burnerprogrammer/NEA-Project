@@ -32,5 +32,17 @@ namespace NEA_Project
                 GRIDbooking.Rows.Add(item);
             }
         }
+
+        private void GRIDbooking_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 6) 
+            { 
+                int id = Convert.ToInt32(GRIDbooking.Rows[e.RowIndex].Cells[0].Value);
+
+                Database.Delete_Booking(id);
+                GRIDbooking.Rows.Clear();
+                Fill_Grid(); 
+            }
+        }
     }
 }

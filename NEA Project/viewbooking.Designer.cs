@@ -48,6 +48,7 @@
             GRIDbooking.RowTemplate.Height = 25;
             GRIDbooking.Size = new Size(776, 350);
             GRIDbooking.TabIndex = 0;
+            GRIDbooking.CellContentClick += GRIDbooking_CellContentClick;
             // 
             // BookingID
             // 
