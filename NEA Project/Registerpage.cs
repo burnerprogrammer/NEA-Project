@@ -27,11 +27,6 @@ namespace NEA_Project
             string username = TXTBOXusername.Text;
             string password = TXTBOXpassword.Text;
             string confirm_password = TXTBOXconfirmpassword.Text;
-            MessageBox.Show("Account created");
-            
-            Loginpage loginpage = new Loginpage();
-            loginpage.Show();
-
 
             if (Database.User_Exists(username) == true)
             {
@@ -44,6 +39,16 @@ namespace NEA_Project
                 MessageBox.Show("passwords don't match");
                 return;
             }
+
+
+
+            MessageBox.Show("Account created");
+            
+            Loginpage loginpage = new Loginpage();
+            loginpage.Show();
+
+
+            
 
 
 
